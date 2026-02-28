@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulator Inimă Interactiv</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🫀 Simulator Interactiv – Sistemul Circulator</h1>
+
+<div class="heart-container">
+    <div class="heart" id="heart"></div>
+</div>
+
+<h2 id="phaseText">Diastolă – Inima se umple cu sânge</h2>
+
+<p>Ritm cardiac: <span id="bpmValue">72</span> BPM</p>
+<input type="range" id="bpm" min="40" max="180" value="72">
+
+<div class="buttons">
+    <button onclick="setMode(60)">🛋️ Repaus</button>
+    <button onclick="stressMode()">😰 Stres</button>
+    <button onclick="relaxMode()">😌 Relaxare</button>
+    <button onclick="arrhythmiaMode()">⚡ Aritmie</button>
+</div>
+
+<canvas id="ecgCanvas" width="700" height="150"></canvas>
+
+<p id="warning"></p>
+
+<div class="stats">
+    <input type="number" id="ageInput" placeholder="Introdu vârsta">
+    <button onclick="showStats()">📊 Vezi statistici</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
